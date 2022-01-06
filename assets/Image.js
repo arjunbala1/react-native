@@ -1,0 +1,1 @@
+import Splash from './Images/splashTick.png'
