@@ -16,10 +16,10 @@ export const Modal = ({
   return (
     <RNModal
       isVisible={isVisible}
-      animationInTiming={1000}
-      animationOutTiming={1000}
-      backdropTransitionInTiming={800}
-      backdropTransitionOutTiming={800}
+      animationInTiming={300}
+      animationOutTiming={500}
+      backdropTransitionInTiming={500}
+      backdropTransitionOutTiming={500}
       {...props}>
       {children}
     </RNModal>
@@ -47,11 +47,11 @@ const ModalFooter = ({ children }: { children?: React.ReactNode }) => (
 const styles = StyleSheet.create({
   container: {
     flex:1,
-    height: 200,
+    height: 100,
     backgroundColor: "#303030",
     borderRadius: 30,
     borderStyle: "solid",
-    marginTop:height-300,
+    marginTop:height-250,
     alignItems:'center',
     
   },

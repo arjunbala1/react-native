@@ -60,7 +60,7 @@ export default function Home({navigation}) {
                     }
                 
             </View>
-            
+{/* ---------------------------- input----------------- */}
             <KeyboardAvoidingView style={Styles.textInputContainer}
             behavior="padding"
             keyboardHorizontalOffset={Platform.select({ios: 80, android: 20})}>
@@ -75,7 +75,7 @@ export default function Home({navigation}) {
                 </TouchableHighlight>
                 
             </KeyboardAvoidingView>
-
+{/* ---------------------------- ////input----------------- */}
 
 
 
@@ -87,7 +87,9 @@ export default function Home({navigation}) {
                     <Modal.Header title="Just a minute.."/>
                 <Modal.Body>
                         <Text style={Styles.text}></Text>
-                        <View style={Styles.checkContainer}>
+
+{/* ---------------------------- CheckBox----------------- */}
+                        {/* <View style={Styles.checkContainer}>
                             <CheckBox
                              tintColors={'#ffffff'}
 
@@ -95,23 +97,24 @@ export default function Home({navigation}) {
                             value={toggleCheckBox}
                             onValueChange={(newValue) => setToggleCheckBox(newValue)} />
                             <Text style={Styles.text}>Set Reminder</Text>
-                        </View>
+                        </View> */}
+{/* ---------------------------/- CheckBox----------------- */}
 {/* set time for reminder */}
 
 
 {/* set time for reminder closed */}
-                        
+{/* ---------------------------- swipe button----------------- */}
                         <SwipeButton
-                        containerStyles={{borderRadius: 10}}
-                        railStyles={{borderRadius: 10}}
+                        containerStyles={{borderRadius: 0}}
+                        railStyles={{borderRadius: 0}}
                             disabled={false}
                             //disable the button by doing true (Optional)
-                            swipeSuccessThreshold={70}
+                            swipeSuccessThreshold={90}
                             height={55}
                             //height of the button (Optional)
                             width={width-90}
                             //width of the button (Optional)
-                            title="Proceed >>>>>" titleFontSize={14}
+                            title="Swipe to Proceed >>>>>" titleFontSize={14}
                             //You can also set your own icon for the button (Optional)
                             onSwipeSuccess={() => {
                                 alert('Data Added ...');
@@ -126,9 +129,10 @@ export default function Home({navigation}) {
                             thumbIconBorderColor="#ffffff" 
                             railBackgroundColor="#ffffff" 
                             railBorderColor="#ffffff" 
-                            thumbIconStyles={{borderRadius: 10}}
+                            thumbIconStyles={{borderRadius: 0}}
                             
                             />
+{/* ----------------------------/ swipe button----------------- */}
 <TouchableHighlight style={Styles.closeButton}  onPress={handleModalNot} >
     <Text style={Styles.closeText}>CLOSE</Text>
 </TouchableHighlight>
@@ -152,7 +156,7 @@ const Styles =  StyleSheet.create({
     },
     InputText: {
         width: '70%',
-        height:40,
+        height:60,
         borderRadius:40,
         fontFamily:'Montserrat Regular 400',
         padding:12,
@@ -160,7 +164,8 @@ const Styles =  StyleSheet.create({
         borderColor:'#212121',
         shadowColor:'grey',
         backgroundColor:'#ffffff',
-        color:'#000000'
+        color:'#000000',
+        fontSize:20
 
     },
     textInputContainer:{
@@ -173,18 +178,19 @@ const Styles =  StyleSheet.create({
         position:'absolute',
     },
     remButton:{
-        width:90,
-        height:40,
+        width:60,
+        height:60,
         borderRadius:40,
         alignItems:'center',
         justifyContent:'center',
         marginLeft:10,
-        backgroundColor:'#3b3a3a'
+        backgroundColor:'#000000'
     },
     remText:{
         fontFamily:'Montserrat SemiBold 600',
         fontSize:10,
-        color:'#ffffff'
+        color:'#ffffff',
+        
     },
     text: {
       fontSize: 16,
